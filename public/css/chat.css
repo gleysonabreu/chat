@@ -8,6 +8,10 @@
 #main #user {
   width: 100%;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #main #user span {
@@ -30,6 +34,7 @@
   flex: 1;
   align-items: center;
   justify-content: center;
+  flex-direction: column-reverse;
   gap: 50px;
 }
 
@@ -68,8 +73,10 @@
 }
 
 #main .chat .chat-messages {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   height: 500px;
+  padding: 10px;
 }
 
 #main .chat .chat-messages input[type="text"] {
@@ -185,4 +192,14 @@
 #main .chat .chat-messages #messages::-webkit-scrollbar-thumb {
   border-radius: 3px;
   cursor: move;
+}
+
+@media (min-width: 750px) {
+  #main .chat {
+    flex-direction: row;
+  }
+
+  #main #user {
+    flex-direction: row;
+  }
 }
